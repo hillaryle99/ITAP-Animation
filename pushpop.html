@@ -1,0 +1,397 @@
+<!-- <html lang="en"> -->
+
+<head>
+  <!-- <link rel="stylesheet" href="arrayGraphics.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="array-animation-body">
+  <div>
+    <h1>Arrays</h1>
+
+    <div id="array-table"></div>
+    <br>
+    <div id="array-length"></div>
+    <br>
+    <div id="array-table-buttons">
+      <button id="array-popup-button">Create New Array</button><br>
+      <button id="push-popup-button">Add New Value (Push)</button>
+      <button id="pop-popup-button">Remove a Value (Pop)</button>
+      <br>
+      <button id="enqueue-popup-button">Enqueue</button>
+      <button id="dequeue-popup-button">Remove a Value (Dequeue)</button>
+
+    </div>
+
+    <div id="array-popup">
+      <div id="array-popup-content">
+        <span class="close">&times;</span>
+
+        <label>Enter new values for the array separated by spaces</label>
+        <input id="input-new-array" placeholder="1 2 3 4 5" />
+        <br /><br>
+        <button type="submit" id="submit-array">Submit Array</button>
+      </div>
+    </div>
+
+    <div id="push-popup">
+      <div id="push-popup-content">
+        <span class="close">&times;</span>
+        <label>array.push() adds a value to the end of an array. For example, <b>array.push(5)</b> will add a 5 to
+          the end of this array.<br> Try it below!<br></label>
+        <br />
+        <input id="add-val" placeholder="1" />
+        <br /><br>
+        <button type="submit" id="submit-push">Add Value</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="pop-popup">
+    <div id="pop-popup-content">
+      <span class="close">&times;</span>
+      <label> Pop removes and returns the last element in the array. </label>
+      <p>Here pop has removed the value: </p>
+      <p id="display-pop"></p>
+    </div>
+  </div>
+
+  <!-- <div id="enqueue-popup">
+    <div id="enqueue-popup-content">
+      <span class="close">&times;</span>
+      <label>Enqueue adds the element to the end of the queue.</label>
+      <input id="enqueue-val" placeholder="1" />
+      <br /><br>
+      <button type="submit" id="submit-enqueue">Enqueue Value</button>
+    </div>
+  </div>
+  </div>
+
+  <div id="dequeue-popup">
+    <div id="dequeue-popup-content">
+      <span class="close">&times;</span>
+      <label> Dequeue removes and returns the first element in the array. </label>
+      <p>Here dequeue has removed the value: </p>
+      <p id="display-dequeue"></p>
+    </div>
+  </div> -->
+
+  <br>
+  <div id="loop-through">
+    <button id="loop-through-button">Run Loop</button>
+    <br>
+    <div id="loop-content">
+      <button id="next-button">Step</button><br>
+      <div id="index-info"></div>
+      <div id="icon-button"><i class="popup fa fa-info-circle"></i></div>
+      <br>
+      <button id="restart-loop">Start Loop Again</button>
+    </div>
+  </div>
+
+  <div id="index-info-popup">
+    <div id="index-info-popup-content">
+      <span class="close">&times;</span>
+      <h2 style="text-align: center;">Indexing Information</h2>
+      <div>
+        <p> In an array, an index starts at 0 and counts up from there. <br>
+          Say that you declare an array called arr with values 2, 4, 6, 8 <br>
+          Declaring that array looks like: <b>arr[] = {2, 4, 6, 8}</b><br><br>
+
+          The value 2 is at index 0, the value 4 is at index 1, and so on. <br><br>
+
+          Typically, programmers use the letter 'i' to show the index in a loop. <br><br></p>
+
+        <span id="for-loop">Example: <b>for (int i=0, i < arr.length, i++)</b></span><br><br>
+        <li><b>int i=0</b> initializes the variable i<br></li>
+        <li><b>i < arr.length</b> is the condition. Here the loop will run as long as the index is less than the length
+              of
+              the array. We use < instead of <=because the last index in the array will always be <i>one less than the
+                length of the array</i> since indexing starts at zero.<br></li>
+        <li><b>i++</b> increments the index after everything inside the loop has executed.<br><br></li>
+
+        Finding <b>i</b> retrieves the index.<br>
+        Finding <b>arr[i]</b> retrieves the value associate with that index.<br>
+        For example, using the array from above, if i = 2, arr[i] equals 6.<br>
+        </p>
+      </div>
+    </div>
+
+
+    <script src="array.js"></script>
+
+</body>
+
+<!-- </html> -->
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@700&display=swap");
+
+  #restart-loop {
+    display: none;
+  }
+
+  #loop-content {
+    display: none;
+  }
+
+  #array-table th {
+    font-size: 2rem;
+    border: 1px solid black;
+    padding: 8px 8px;
+    margin: 8px 0px;
+  }
+
+  #array-table #index-row {
+    text-align: center;
+  }
+
+  #array-table-buttons button {
+    background-color: #3399ff;
+    color: white;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 10px;
+    /* box-shadow: 2px 2px 2px gray; */
+    border: none;
+    margin: 2px;
+    font-family: "Open Sans";
+  }
+
+  #array-table-buttons button:hover {
+    background-color: #0066cc;
+    color: white;
+    width: 12rem;
+    height: 2rem;
+    font-weight: bolder;
+    /* box-shadow: 2px 2px 2px gray; */
+    border: none;
+    margin: 2px;
+    font-family: "Open Sans";
+  }
+
+  #array-table-buttons button:active {
+    color: #0066cc;
+    background-color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    /* border: none; */
+    margin: 2px;
+    outline: none;
+    border: 2px solid #0066cc;
+    font-family: "Open Sans";
+  }
+
+  #array-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  #array-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+  #push-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  #push-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+  #pop-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  #pop-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+  #enqueue-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  #enqueue-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+  #dequeue-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  #dequeue-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+  #loop-through button {
+    background-color: #00b300;
+    color: white;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    margin: 2px;
+    font-family: "Open Sans";
+  }
+
+  #loop-through button:hover {
+    background-color: #008000;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    margin: 2px;
+    font-family: "Open Sans";
+  }
+
+  #loop-through button:active {
+    color: #008000;
+    background-color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    /* border: none; */
+    margin: 2px;
+    outline: none;
+    border: 2px solid #008000;
+    font-family: "Open Sans";
+  }
+
+  #loop-content #icon-button {
+    float: left;
+    cursor: pointer;
+  }
+
+  #index-info {
+    width: auto;
+    margin-right: .5rem;
+    float: left;
+  }
+
+  #index-info-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  #index-info-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px 18px 10px 18px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+  #index-info-popup-content h2 {
+    margin: 1rem;
+  }
+
+  #index-info-popup-content p {
+    margin: 1rem;
+  }
+
+  #for-loop {
+    text-align: center;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>

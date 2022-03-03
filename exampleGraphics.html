@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- <link rel="stylesheet" href="exampleGraphics.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</head>
+
+<body>
+  <div id="method-body">
+    <div class="array-method">
+      <h1>Examples of Arrays</h1>
+      <p>public void method1() {</p>
+      <p>&nbsp &nbsp int x, y;</p>
+      <div id="declare-array">
+        <p>&nbsp &nbsp int[] b = new int[10];</p>
+        <div id="icon-button"><i class="popup fa fa-info-circle declare-popup"></i></div>
+        <div id="declare-info-popup">
+          <div id="declare-info-popup-content">
+            <span class="close">&times;</span>
+            <p>
+              Here we declare an array 'b.'<br /> First, we define the variable type
+              with square brackets, in this case we use <b>int[]</b> <br /> So we
+              know this will be an array of ints. <br />Setting your array 'b' to
+              <b>new int [10]</b> means that this array has a length of ten.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div id="for-loop">
+        <p>&nbsp &nbsp for (int i = 0; i < 10; i++) {</p>
+      </div>
+      <div id="for-loop-less-than">
+        <div>
+          <p>&nbsp &nbsp &nbsp &nbsp b[i] = i%6+8/3;<br />
+            &nbsp &nbsp}</p>
+        </div>
+      </div>
+      <button id='run-loop'>Run Loop</button>
+
+      <div id="for-loop-out" class="portion">
+        <p>&nbsp &nbsp System.out.println("Before");</p>
+        <div id='for-loop-two' class="portion">
+          <p>&nbsp &nbsp for(int i=0; i < 10; i++) {</p>
+        </div>
+      </div>
+
+
+
+      <div id="printl-output" class="portion">
+        <p>&nbsp &nbsp &nbsp &nbsp &nbspSystem.out.println(b[i]);</p>
+        <p>&nbsp &nbsp }</p>
+        <p>&nbsp &nbsp System.out.println("Array: " + b);</p>
+        <button id="run-loop-two" class="portion">Run Loop</button>
+      </div>
+
+
+      <div id="less-than-nine" class="portion">
+        <p class="loop">&nbsp &nbsp for(int i=1; i < 9; i++) {</p>
+            <div id="setting-new-b" class="portion">
+              <p>&nbsp &nbsp &nbsp &nbsp b[i] = b[i + 1] + b[i -1];</p>
+              <p>&nbsp &nbsp }</p>
+              <button id="run-loop-three">Run Loop</button>
+            </div>
+
+      </div>
+
+      <div id="last-loop">
+        <p class="portion" id="after">&nbsp &nbsp System.out.println("After");</p>
+        <p class="portion">&nbsp &nbsp for(int i=0; i < 10; i++) {</p>
+            <div class="portion">
+              <!-- <p>&nbsp &nbsp &nbsp &nbspSystem.out.println(b[i]);<br />&nbsp &nbsp}</p> -->
+              <p>&nbsp &nbsp &nbsp &nbspSystem.out.println(b[i]);<br />&nbsp &nbsp}</p>
+              <button id="run-loop-four">Run Loop</button>
+            </div>
+            <p>}</p>
+      </div>
+      <br><br>
+      <button id="next-button"> Next</button>
+      <button id='back-button'>Reset</button>
+
+    </div>
+    <div id="all-output">
+      <div class="output-box">
+        <p>Output:</p>
+        <p id="write-output"></p>
+
+
+      </div>
+
+      <div id="array-build-output">
+        <h3> The Array</h3>
+        <p id="show-i"> </p>
+        <p id="add-to-arr"> </p>
+        <p id="b-vals"></p>
+      </div>
+    </div>
+
+
+    <script src="example.js"></script>
+</body>
+
+<style>
+  button:disabled,
+  button[disabled] {
+    background-color: gray;
+  }
+
+
+  .array-method p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  #method-body {
+    float: left;
+  }
+
+  #method-body button {
+    background-color: blue;
+    height: 2rem;
+    width: auto;
+    border: #000;
+    color: white;
+    border-radius: 3px;
+    padding: 2px 12px 2px 12px;
+  }
+
+  #method-body button:hover {
+    background-color: lightblue;
+    cursor: pointer;
+    height: 2rem;
+    font-weight: bold;
+    width: auto;
+    border: #000;
+    color: white;
+    border-radius: 3px;
+    padding: 2px 12px 2px 12px;
+  }
+
+  #method-body button:disabled {
+    background-color: gray;
+    height: 2rem;
+    width: auto;
+    color: white;
+    border-radius: 3px;
+    padding: 2px 12px 2px 12px;
+  }
+
+  #method-body p {
+    font-family: "Courier New", Courier, monospace;
+    /* float: left; */
+  }
+
+  .array-method {
+    float: left;
+  }
+
+  #all-output {
+    float: left;
+    margin-top: 1.5rem
+  }
+
+  .output-box {
+    border: 2px solid limegreen;
+    width: 10rem;
+    word-wrap: break-word;
+    height: auto;
+    float: left;
+    margin-left: .5rem;
+    margin-top: .5rem;
+  }
+
+  #array-build-output {
+    float: left;
+    margin-left: 1rem;
+    margin-top: .5rem;
+  }
+
+  #run-loop-two {
+    display: none;
+  }
+
+  .output-box p:first-child {
+    text-align: center;
+  }
+
+  #for-loop p {
+    color: #466fe4;
+    font-weight: bold;
+
+  }
+
+  #for-loop-two p {
+    color: #466fe4;
+    font-weight: bold;
+  }
+
+  .final-icon-button {
+    display: none !important;
+  }
+
+  #final-array-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  #final-array-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px 18px 10px 18px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+
+
+  #declare-info-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+
+  #declare-info-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+  .portion {
+    display: none;
+  }
+
+  #less-than-nine .loop {
+    color: #466fe4;
+    font-weight: bold;
+  }
+
+  #last-loop p:nth-child(2) {
+    color: #466fe4;
+    font-weight: bold;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+</html>

@@ -1,0 +1,35 @@
+<table id="tblBody_DBA">
+    <tbody>
+        <tr id="Att_5258717">
+            <td>03/28/2017</td>
+            <td></td>
+        </tr>
+        <tr id="Att_5258339">
+            <td>03/25/2017</td>
+            <td>03/26/2017</td>
+        </tr>                       
+        <tr id="Att_5258337">
+            <td>03/22/2017</td>
+            <td>03/24/2017</td>
+        </tr>
+        <tr id="Att_5258332">
+            <td>03/16/2017</td>
+            <td>03/21/2017</td>
+        </tr>
+        <tr id="Att_5258331">
+            <td>03/10/2017</td>
+            <td>03/15/2017</td>
+        </tr>
+    </tbody>
+</table>
+<script>
+ function sortRow(distType){
+        var table = document.getElementById(distType); //this is new value that I have to compare against existing values and return position in the table.
+		for (var i = 0; i < table.rows.length; i++) {
+   var firstCol = table.rows[i].cells[0]; //first column
+    console.log(firstCol.innerHTML);// or anything you want to do with first col
+}
+    }
+	sortRow("tblBody_DBA");
+	
+	</script>​

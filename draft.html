@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <h1>Array Animation</h1>
+  <button onclick="darkmode()">Toggle dark mode</button>
+  <div id="array-table"></div>
+  <br>
+  <div id="array-length"></div>
+  <br>
+      <br>
+    <div id="array-table-buttons">
+      <button id="array-popup-button">Create New Array</button><br>
+      <button id="push-popup-button">Add New Value (Push)</button>
+      <button id="pop-popup-button">Remove a Value (Pop)</button>
+      <br>
+      <button id="enqueue-popup-button">Enqueue</button>
+      <button id="dequeue-popup-button">Remove a Value (Dequeue)</button>
+      <!-- <button id="modify">Modify a Value</button> -->
+
+    </div>
+
+    <div id="array-popup">
+      <div id="array-popup-content">
+        <span class="close">&times;</span>
+
+        <label>Enter new values for the array separated by spaces</label>
+        <input id="input-new-array" placeholder="1 2 3 4 5" />
+        <br /><br>
+        <button type="submit" id="submit-array">Submit Array</button>
+      </div>
+    </div>
+
+    <div id="push-popup">
+      <div id="push-popup-content">
+        <span class="close">&times;</span>
+        <label>array.push() adds a value to the end of an array. For example, <b>array.push(5)</b> will add a 5 to
+          the end of this array.<br> Try it below!<br></label>
+        <br />
+        <input id="add-val" placeholder="1" />
+        <br /><br>
+        <button type="submit" id="submit-push">Add Value</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="pop-popup">
+    <div id="pop-popup-content">
+      <span class="close">&times;</span>
+      <label> Pop removes and returns the last element in the array. </label>
+      <p>Here pop has removed the value: </p>
+      <p id="display-pop"></p>
+    </div>
+  </div>
+
+  <div id="enqueue-popup">
+    <div id="enqueue-popup-content">
+      <span class="close">&times;</span>
+      <label>Enqueue adds the element to the end of the queue.</label>
+      <input id="enqueue-val" placeholder="1" />
+      <br /><br>
+      <button type="submit" id="submit-enqueue">Enqueue Value</button>
+    </div>
+  </div>
+  </div>
+
+  <div id="dequeue-popup">
+    <div id="dequeue-popup-content">
+      <span class="close">&times;</span>
+      <label> Dequeue removes and returns the first element in the array. </label>
+      <p>Here dequeue has removed the value: </p>
+      <p id="display-dequeue"></p>
+    </div>
+  </div>
+
+  <br>
+  <div id="loop-through">
+    <button id="loop-through-button">Run Loop</button>
+    <br>
+    <div id="loop-content">
+      <button id="next-button">Step</button><br>
+      <div id="index-info"></div>
+      <div id="icon-button"><i class="popup fa fa-info-circle"></i></div>
+      <br>
+      <button id="restart-loop">Start Loop Again</button>
+    </div>
+  </div>
+
+  <div id="index-info-popup">
+    <div id="index-info-popup-content">
+      <span class="close">&times;</span>
+      <h2 style="text-align: center;">Indexing Information</h2>
+      <div>
+        <p> In an array, an index starts at 0 and counts up from there. <br>
+          Say that you declare an array called arr with values 2, 4, 6, 8 <br>
+          Declaring that array looks like: <b>arr[] = {2, 4, 6, 8}</b><br><br>
+
+          The value 2 is at index 0, the value 4 is at index 1, and so on. <br><br>
+
+          Typically, programmers use the letter 'i' to show the index in a loop. <br><br></p>
+
+        <span id="for-loop">Example: <b>for (int i=0, i < arr.length, i++)</b></span><br><br>
+        <li><b>int i=0</b> initializes the variable i<br></li>
+        <li><b>i < arr.length</b> is the condition. Here the loop will run as long as the index is less than the length
+              of
+              the array. We use < instead of <=because the last index in the array will always be <i>one less than the
+                length of the array</i> since indexing starts at zero.<br></li>
+        <li><b>i++</b> increments the index after everything inside the loop has executed.<br><br></li>
+
+        Finding <b>i</b> retrieves the index.<br>
+        Finding <b>arr[i]</b> retrieves the value associate with that index.<br>
+        For example, using the array from above, if i = 2, arr[i] equals 6.<br>
+        </p>
+      </div>
+    </div>
+    <script src="s.js"></script>
+</body>
+</html>
+

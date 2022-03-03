@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@700&display=swap");
+
+#restart-loop {
+  display: none;
+}
+
+#loop-content {
+  display: none;
+}
+
+#array-table th {
+  font-size: 2rem;
+  border: 1px solid black;
+  padding: 8px 8px;
+  margin: 8px 0px;
+}
+#array-table #index-row {
+  text-align: center;
+}
+
+#array-table-buttons button {
+  background-color: #3399ff;
+  color: white;
+  width: 12rem;
+  height: 2rem;
+  border-radius: 10px;
+  /* box-shadow: 2px 2px 2px gray; */
+  border: none;
+  margin: 2px;
+  font-family: "Open Sans";
+}
+
+#array-table-buttons button:hover {
+  background-color: #0066cc;
+  color: white;
+  width: 12rem;
+  height: 2rem;
+  font-weight: bolder;
+  /* box-shadow: 2px 2px 2px gray; */
+  border: none;
+  margin: 2px;
+  font-family: "Open Sans";
+}
+#array-table-buttons button:active {
+  color: #0066cc;
+  background-color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  /* border: none; */
+  margin: 2px;
+  outline: none;
+  border: 2px solid #0066cc;
+  font-family: "Open Sans";
+}
+#array-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#array-popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+#push-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#push-popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+#pop-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#pop-popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+#enqueue-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#enqueue-popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+#dequeue-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#dequeue-popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+#loop-through button {
+  background-color: #00b300;
+  color: white;
+  width: 12rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+  margin: 2px;
+  font-family: "Open Sans";
+}
+
+#loop-through button:hover {
+  background-color: #008000;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  margin: 2px;
+  font-family: "Open Sans";
+}
+#loop-through button:active {
+  color: #008000;
+  background-color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  /* border: none; */
+  margin: 2px;
+  outline: none;
+  border: 2px solid #008000;
+  font-family: "Open Sans";
+}
+
+#loop-content #icon-button {
+  float: left;
+  cursor: pointer;
+}
+
+#index-info {
+  width: 28%;
+  margin-right: 0;
+  float: left;
+}
+
+#index-info-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#index-info-popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px 18px 10px 18px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+#index-info-popup-content h2 {
+  margin: 1rem;
+}
+#index-info-popup-content p {
+  margin: 1rem;
+}
+
+#for-loop {
+  text-align: center;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
